@@ -44,8 +44,48 @@ cool-admin-java/
 
 ### PC前端框架(Vue)
 
+#### 项目结构
+
+```
+cool-admin-vue/
+├── Dockerfile
+├── env.d.ts
+├── eslint.config.js
+├── index.html
+├── nginx.conf
+├── packages
+│   ├── crud
+│   └── vite-plugin
+├── postcss.config.js
+├── public
+│   ├── favicon.ico
+│   ├── logo.png
+│   └── 用户导入模版.xlsx
+├── README.md
+├── src
+│   ├── App.vue
+│   ├── config
+│   ├── cool
+│   ├── main.ts
+│   ├── modules
+│   ├── plugins
+│   └── shims-vue.d.ts
+├── tailwind.config.js
+├── tsconfig.json
+└── vite.config.ts
+```
+
 #### 技术栈
 
-- 前端：**`Vue3` `Vite` `Element-Ui` `Typescript`**
+- 前端：**`Vue3` `Vite` `Element-Ui` `Typescript` `Tailwind CSS`**
+
+#### 项目启动
+
+```bash
+   pnpm install
+   pnpm dev
+```
+
+应用将在 `http://localhost:9000` 上运行。
 
 ### 移动端前端框架(uni-app x)
