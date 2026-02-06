@@ -6,6 +6,8 @@ Cool 是一个包含PC前端、移动端和后台的完整系统
 
 ```
 cool-admin-java/
+├── docker-compose.yml
+├── Dockerfile
 ├── pom.xml
 ├── README.md
 ├── src/
@@ -89,3 +91,74 @@ cool-admin-vue/
 应用将在 `http://localhost:9000` 上运行。
 
 ### 移动端前端框架(uni-app x)
+
+#### 项目结构
+
+```
+cool-admin-unix/
+├── App.uvue
+├── components
+│   ├── locale-set.uvue
+│   └── size-set.uvue
+├── config
+│   ├── dev.ts
+│   ├── index.ts
+│   ├── prod.ts
+│   └── proxy.ts
+├── favicon.ico
+├── icons
+│   ├── iconfont.zip
+│   ├── RemixIcon_Collection_2509090754.remixicon
+│   └── remixicon.zip
+├── index.html
+├── LICENSE
+├── main.ts
+├── manifest.json
+├── package.json
+├── pages
+│   ├── demo
+│   ├── index
+│   ├── set
+│   ├── template
+│   └── user
+├── pages.json
+├── platformConfig.json
+├── plugins
+│   ├── emitter.ts
+│   ├── locale.ts
+│   ├── router.ts
+│   └── touch.ts
+├── README.md
+├── static
+│   ├── demo
+│   ├── empty
+│   ├── icon
+│   └── logo.png
+├── tailwind.config.ts
+├── theme.json
+├── tsconfig.json
+├── uni_modules
+│   ├── cool-canvas
+│   ├── cool-open-web
+│   ├── cool-share
+│   ├── cool-svg
+│   ├── cool-ui
+│   ├── cool-unix
+│   └── cool-vibrate
+├── uni.scss
+├── unpackage
+│   └── dist
+└── vite.config.ts
+```
+
+#### 技术栈
+
+- **`uni-app x`, `Vue 3`, `TypeScript`, `Cool UI`**
+
+#### 项目启动
+
+```bash
+    pnpm install
+```
+
+- 在hbuilder中打开项目, 启动h5或者原应用
