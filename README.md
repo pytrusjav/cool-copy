@@ -34,11 +34,29 @@ cool-admin-java/
 
 - 修改配置
 
-```shell
-# 修改数据库 posgresql
+修改数据库 posgresql
 
-# 修改缓存 redis
+```yml
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/cool
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+```
 
+修改缓存 redis
+
+```yml
+spring:
+  cache:
+    type: redis
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0
+      password:
 ```
 
 - 运行 `mvn spring-boot:run`
@@ -161,4 +179,17 @@ cool-admin-unix/
     pnpm install
 ```
 
+修改本地代理
+
+```ts
+dev: {
+		target: "http://127.0.0.1:8001",
+		changeOrigin: true,
+		rewrite: (path: string) => path.replace("/dev", "")
+	},
+```
+
 - 在hbuilder中打开项目, 启动h5或者原应用
+
+这里有一个细节, 移动端默认是验证码登录, 所以可以提前在缓存中存一个值
+![alt text](/image/redis-code.png)
